@@ -99,6 +99,7 @@ int main()
 			fitness(&(generation.chromosomes[i]));
 		}
 		qsort(&(generation.chromosomes), POPULATION_SIZE, sizeof(chromosome_t), compare_chromosome);
+		printf("Iteration %d ", times);
 		print_population(generation);
 
 		memset(&generation_next, 0, sizeof(population_t));
@@ -115,6 +116,7 @@ int main()
 	}
 
 	qsort(&(generation.chromosomes), POPULATION_SIZE, sizeof(chromosome_t), compare_chromosome);
+	printf("Final ");
 	print_population(generation);
 
 	return 0;
